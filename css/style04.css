@@ -1,0 +1,40 @@
+body{
+    background-image: url('../images/img_2425_copy_master.jpg');
+    background-size: cover;
+}
+.content{
+    width: 1200px;
+    margin: auto;
+}
+.header{
+    height: 100px;
+    background-color: blue
+}
+.left-1, .left-2, .right-1, .right-2{
+    float: left;
+    height: 250px;
+}
+.left-1{
+    width: 40%;
+    background-color: pink
+}
+.right-1{
+    width: 60%;
+    background-color: yellow
+}
+
+.left-2{
+    width: 70%;
+    background-color: red
+}
+.right-2{
+    width: 30%;
+    background-color: green
+}
+.footer{
+    height: 100px;
+    background-color: honeydew;
+    clear: both;
+    /* float: left;
+    width: 100%; */
+}
