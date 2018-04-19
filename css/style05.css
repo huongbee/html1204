@@ -1,0 +1,19 @@
+.box{
+    width: 200px;
+    height: 200px;
+    background: blue;
+    border: 1px solid #cccccc;
+    color: #fff;
+    margin: 10px 20px;
+    margin-bottom: 50px;
+    float: left;
+
+    /* padding-left: 10px */
+
+
+
+    /* border-radius: 50% */
+}
+.box p{
+    margin-left: 10px
+}
