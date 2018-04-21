@@ -1,0 +1,78 @@
+body{
+    margin: 0px
+}
+header{
+    height: 55px;
+    background-color: #fed700
+}
+.content{
+    width: 1200px;
+    margin: auto
+}
+.logo img{
+    height: 35px;
+    padding: 10px
+}
+.menu-left{
+    width: 35%;
+    background-color: black;
+    height: 55px;
+}
+.menu-right{
+    width: 65%;
+}
+.menu-left, .menu-right, .logo, .search-form{
+    float: left;
+}
+.item, .card, .diennuoc{
+    float: left;
+}
+.item{
+    width: 9%
+}
+.diennuoc{
+    width: 15%;
+}
+.card{
+    width: 12%;
+}
+.search-form input{
+    border: none;
+    height: 35px;
+    width: 180px;
+    margin: 10px 0;
+    font-size: 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-indent:10px
+}
+.search-form button{
+    padding-top: 2px;
+    border: none;
+    height: 37px;
+    padding-bottom: 5px;
+    margin-left: -4px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.item i{
+    display: block;
+    font-size: 27px;
+    text-align: center;
+}
+.item{
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 20px;
+    padding-top: 5px;
+    text-align: center
+}
+.card ,  .diennuoc{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-left: 1px solid rgba(0,0,0,.1);
+    text-align: center;
+    line-height: 20px;
+    padding: 7px 0;
+    font-size: 13px
+}
