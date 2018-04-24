@@ -1,0 +1,48 @@
+body{
+    margin: 0px
+}
+.line{
+    height: 100px;
+    width: 24%;
+    border: 1px solid ;
+    float: left;
+}
+
+.content{
+    width: 1208px;
+    margin: auto
+}
+
+/* @media screen and (max-width:1000px){
+    .content{
+        width: 999px;
+    }
+    .line{
+        width: 32.33333%;
+    }
+} */
+
+@media screen and (max-width:600px){
+    .content{
+        width: 100%;
+    }
+    .line{
+        width: 97%;
+    }
+}
+
+@media (min-width:601px) and (max-width:1000px) {
+    .content{
+        width: 100%;
+    }
+    .line{
+        width: 49%;
+    }
+}
+
+@media screen and (min-width:1001px){
+    .content{
+        width: 1000px;
+    }
+
+}
