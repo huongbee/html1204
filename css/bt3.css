@@ -1,5 +1,6 @@
 body{
-    background-color: aliceblue
+    background-color: aliceblue;
+    margin: 0
 }
 .content{
     width: 1260px;
@@ -51,4 +52,40 @@ body{
 .infor h2:hover{
     color: blue;
     cursor: pointer;
+}
+
+@media screen and (max-width:500px){
+    .content{
+        width: 500px;
+    }
+    .item{
+        margin: 25px 50px
+    }
+}
+
+@media (min-width:501px) and (max-width:725px){
+    .content{
+        width: 500px;
+    }
+    .item{
+        width: 230px;
+    }
+}
+
+@media (min-width:726px) and (max-width:1000px){
+    .content{
+        width: 700px;
+    }
+    .item{
+        width: 330px;
+    }
+}
+
+@media screen and (min-width:1001px) and  (max-width:1225px){
+    .content{
+        width: 900px;
+    }
+    .item{
+        width: 280px;
+    }
 }
