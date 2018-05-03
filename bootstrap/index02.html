@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 </head>
 <style>
-    
-    div[class^='col']{
+    div[class^='col'] {
         border: solid 1px #000
     }
+
+    .row-1 {
+        height: 100px;
+        background-color: antiquewhite
+    }
+
+    .row-2 {
+        height: 200px;
+        background-color: antiquewhite
+    }
 </style>
+
 <body>
     <div class="container">
         <div class="row">
@@ -33,11 +44,106 @@
         <hr>
 
         <div class="row justify-content-center">
-                <div class="col-3">1</div>
-                <div class="col-3">2</div>
-                <div class="col-3">3</div>
-            </div>
-    </div>
+            <div class="col-3">1</div>
+            <div class="col-3">2</div>
+            <div class="col-3">3</div>
+        </div>
 
+        <hr>
+
+        <div class="row align-items-start row-1">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+        <hr>
+        <div class="row align-items-center row-1">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+        <hr>
+        <div class="row row-2">
+            <div class="col align-self-start">
+                One of three columns
+            </div>
+            <div class="col align-self-center">
+                One of three columns
+            </div>
+            <div class="col align-self-end">
+                One of three columns
+            </div>
+        </div>
+        <hr>
+        <div class="row justify-content-end">
+            <div class="col-3">1</div>
+            <div class="col-3">2</div>
+            <div class="col-3">3</div>
+        </div>
+        <hr>
+        <div class="row ">
+            <div class="col-3 offset-3">1</div>
+            <div class="col-3 offset-1">2</div>
+        </div>
+        <hr>
+        <div class="row ">
+            <div class="col-3 offset-2">1</div>
+            <div class="col-3 offset-2">2</div>
+        </div>
+
+        <hr>
+        <div class="row ">
+            <div class="col-4 offset-1">1</div>
+            <div class="col-4 offset-2">2</div>
+        </div>
+        <hr>
+        <div class="row justify-content-center">
+            <div class="col-3" style="border: none">
+                <div class="alert alert-success text-center">
+                    Login successfuly!
+                </div>
+            </div>
+        </div>
+
+        <div class="alert text-success text-center">
+            Login successfuly!
+        </div>
+        <button class="btn btn-primary">Login</button>
+        <button>Register</button>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <label for="" class="control-label">Fullname</label>
+        <input type="text" class="form-control" name="" id="" placeholder="Enter fullname">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <script src="js/bootstrap.js"></script>
 </body>
+
 </html>
