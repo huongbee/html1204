@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myBtn" onclick="alertNoti()">Click me!</button>
+    <br>
+    <hr>
+    <select onchange="getValue(this.value)">
+        <option value="1">num 1</option>
+        <option value="2">num 2</option>
+        <option value="3">num 3</option>
+    </select>
+    <br>
+    <hr>
+    <!-- <input id="txtValue" type="text" placeholder="Enter value"> -->
+    <div id="my-div">
+        <h2>Hello class</h2>
+    </div>
+    <button onclick="getTextInput()">Get Value</button>
+    <button onclick="getTextInput2()">Get Value 2</button>
+    <button onclick="changeData()">Change Data</button>
+    
+    
+    
+
+    <script>
+        function changeData(){
+            //document.getElementById('my-div').innerText = "<h2>Hello World!</h2>"
+            document.getElementById('my-div').innerHTML = "<h2>Hello World!</h2>"
+            
+        }
+
+        function getTextInput(){
+            // let input = document.getElementById('txtValue').value
+            var input = document.getElementById('my-div').innerText
+            alert(input)
+        }
+
+        function getTextInput2(){
+            var input = document.getElementById('my-div').innerHTML
+            alert(input)
+        }
+
+
+        var x = 1;
+
+        function alertNoti(){
+            alert('Hello JS!')
+        }
+
+        function getValue(param){
+            alert(param)
+        }
+
+    
+    </script>
+</body>
+</html>
