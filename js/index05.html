@@ -12,18 +12,19 @@
     }
 </style>
 <body>
-    <input type="text" id="so_a" placeholder="so a">
-    <select id="pheptinh">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-    
-    </select>
-    <input type="text" id="so_b" placeholder="so b">
-    <button onclick="caculator()">Tinh</button>
-    <input type="text" id="result" placeholder="Ket qua" readonly>
-
+    <form>
+        <input type="text" id="so_a" placeholder="so a">
+        <select id="pheptinh">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        
+        </select>
+        <input type="text" id="so_b" placeholder="so b" required>
+        <button type="button" onclick="caculator()">Tinh</button>
+        <input type="text" id="result" placeholder="Ket qua" readonly>
+    </form>
     <script>
         function caculator(){
             var objA = document.getElementById('so_a')
@@ -35,8 +36,17 @@
             var soa = parseInt(objA.value)
             var sob = parseInt(objB.value)
 
-            if(isNaN(soa)){
+            if(isNaN(soa) || soa==''){
                 alert("Vui lòng nhập số")
+                objA.value = ''
+                objA.focus();
+                return;
+            }
+            if(isNaN(sob) || sob==''){
+                alert("Vui lòng nhập số")
+                objB.value = ''
+                objB.focus();
+                return;
             }
             if(pheptinh == '+'){
                 objResult.value = soa+sob
