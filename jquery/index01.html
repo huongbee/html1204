@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        width: 80px;
+    }
+</style>
+<body>
+    <form>
+        <input type="text" id="so_a" placeholder="so a">
+        <select id="pheptinh">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        
+        </select>
+        <input type="text" id="so_b" placeholder="so b" required>
+        <button type="button">Tinh</button>
+        <input type="text" id="result" placeholder="Ket qua" readonly>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                var soA = parseInt($('#so_a').val());
+                var soB = parseInt($('#so_b').val());
+
+                var pt = $('#pheptinh').val();
+                if(isNaN(soA) || soA ==''){
+                    alert('Vui long nhap so')
+                    $('#so_a').val('');
+                    $('#so_a').focus()
+                    return
+                }
+                if(isNaN(soB) || soB ==''){
+                    alert('Vui long nhap so')
+                    $('#so_b').val('');
+                    $('#so_b').focus()
+                    return
+                }
+                
+            })
+        })
+    </script>
+</body>
+</html>

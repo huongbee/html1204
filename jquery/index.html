@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: blue
+    }
+</style>
+<body>
+    
+    <input type="text" class="txtNum">
+    <div id="my-div" class="my-class">Button</div>
+    <hr>
+
+    <div class="old-text">Old text</div>
+    <button>Change Text</button>
+    <hr>
+    <div class="box"></div>
+    <button class="clickBox">Animate Box</button>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $('div').click(function(){
+            //     alert('Hello!!')
+            // })
+            // $('#my-div').click(function(){
+            //     alert('Hello!!')
+            // })
+            // $('.my-class').click(function(){
+            //     alert('Hello!!')
+            // })
+            $('.my-class').click(function(){
+                alert($('.txtNum').val())
+            })
+
+            $('button').click(function(){
+                //$('.old-text').text('<h3>New Text</h3>')
+                //$('.old-text').html('<h3>New Text</h3>')
+                //$('.old-text').append('New text')
+                //$('.old-text').prepend('New text')
+            })
+
+            $('.clickBox').click(function(){
+                // $('.box').hide(500)
+                //$('.box').show(500)
+                //$('.box').toggle(500)
+                // $('.box').fadeOut(500)
+                // $('.box').fadeIn(500)
+                // $('.box').fadeToggle(500)
+                $('.box').animate({
+                    // "width":"100px",
+                    // "height":"100px",
+                    // "opacity":"0.6"
+                    // "position": "absolute",
+                    // "left": "500px"
+                     "margin-left":"500px"
+                },1000,function(){
+                    $('.box').animate({
+                        "margin-left":0
+                    },1000,function(){
+                            $('.box').animate({
+                            "margin-left":500
+                        },1000)
+                    })
+                })
+            })  
+        })
+    </script>
+</body>
+</html>
