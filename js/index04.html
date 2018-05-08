@@ -9,11 +9,23 @@
 <body>
     <img src="images/pic_bulboff.gif" id="light" >
     <br>
-    <button onclick="turnLight()">Turn on</button>
+    <button onclick="turnLight()" id="buttonTurn">Turn on</button>
 
     <script>
+        var flag = true
         function turnLight(){
-            document.getElementById('light').setAttribute('src','images/pic_bulbon.gif')
+            var light = document.getElementById('light');
+            var btn = document.getElementById('buttonTurn');
+
+            if(flag){
+                light.setAttribute('src','images/pic_bulbon.gif')
+                buttonTurn.innerText = 'Turn off'
+            }
+            else{
+                light.setAttribute('src','images/pic_bulboff.gif')
+                buttonTurn.innerText = 'Turn on'                
+            }
+            flag = !flag
         }
     </script>
 </body>
