@@ -6,17 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<style>
+    input{
+        width: 80px;
+    }
+</style>
 <body>
-    <input type="text"  placeholder="so a">
-    <select >
+    <input type="text" id="so_a" placeholder="so a">
+    <select id="pheptinh">
         <option value="+">+</option>
-        <option value="+">-</option>
-        <option value="+">*</option>
-        <option value="+">/</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
     
     </select>
-    <input type="text" placeholder="so b">
-    <button>Tinh</button>
-    <input type="text" placeholder="Ket qua" readonly>
+    <input type="text" id="so_b" placeholder="so b">
+    <button onclick="caculator()">Tinh</button>
+    <input type="text" id="result" placeholder="Ket qua" readonly>
+
+    <script>
+        function caculator(){
+            var objA = document.getElementById('so_a')
+            var objB = document.getElementById('so_b');
+            var objResult = document.getElementById('result')
+
+            var pheptinh = document.getElementById('pheptinh').value
+
+            var soa = parseInt(objA.value)
+            var sob = parseInt(objB.value)
+
+            if(isNaN(soa)){
+                alert("Vui lòng nhập số")
+            }
+            if(pheptinh == '+'){
+                objResult.value = soa+sob
+            }
+            else if(pheptinh == '-'){
+                objResult.value = soa-sob
+            }
+            else if(pheptinh == '*'){
+                objResult.value = soa*sob
+            }
+            else{
+                if(sob == 0){
+                    alert("Vui lòng nhập b khác 0")
+                    objB.value = ''
+                    objB.focus();
+                    return;
+                }
+                objResult.value = soa/sob
+            }
+        }
+    </script>
 </body>
 </html>
