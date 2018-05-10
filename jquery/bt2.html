@@ -39,11 +39,21 @@
                 var price = $('.price').attr('data-price')
                 var qty = parseInt($('.txtQty').val()) + 1
                
-                $('.txtQty').val(qty)
-
-                price = (price*qty).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")
-                $('#price').text(price)
-                //console.log(price)
+                if(qty<=20){
+                    $('.txtQty').val(qty)
+                    price = (price*qty).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")
+                    $('#price').text(price)
+                }
+            })
+            $('.btnReduce').click(function(){
+                var price = $('.price').attr('data-price')
+                var qty = parseInt($('.txtQty').val()) - 1
+               
+                if(qty>=1){
+                    $('.txtQty').val(qty)
+                    price = (price*qty).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")
+                    $('#price').text(price)
+                }
             })
         })
     </script>
