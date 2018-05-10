@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .banco{
+        width: 800px;
+        margin: auto;
+    }
+    /* .oco{
+        width: 38px;
+        height: 38px;
+        float: left;
+        border: 1px solid #ccc;
+        background-color: beige
+    } */
+</style>
+<body>
+    <div class="banco"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+
+            for(var i=1; i<=400; i++){
+                $('.banco').append('<div class="oco"></div>')
+            }
+
+            $('.oco').css({
+                "height": "38px",
+                "width": "38px",
+                "float": "left",
+                "border": "1px solid #ccc",
+                "background-color": "beige",
+                "font-size":"30px",
+                "text-align":"center"
+            })
+
+            $('.oco').mouseover(function(){
+                $(this).css('background-color','#a7f9aa')
+            })
+            $('.oco').mouseleave(function(){
+                $(this).css('background-color','beige')
+            })
+
+            var flag = true;
+            $('.oco').click(function(){
+                // if(flag) $(this).text('X')
+                // else $(this).text('O')
+                if($(this).text() == ''){
+                    flag ? $(this).text('X') : $(this).text('O')
+                    flag = !flag
+                }
+                else alert('Cant click this!')
+                
+            })
+        })
+    </script>
+</body>
+
+</html>
